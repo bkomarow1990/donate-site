@@ -1,0 +1,18 @@
+.card {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 40%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.card span {
+    font-size: 15px;
+}
+
+.card button {
+    width: 150px;
+    color: #fff;
+    margin-top: 10px;
+}
