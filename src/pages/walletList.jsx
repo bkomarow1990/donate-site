@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/footer";
 import Wallet from "../components/wallet";
 import "../styles/walletList.css";
 
@@ -21,6 +22,7 @@ export default function WalletList() {
                 name="Ministry of Defense"
                 walletData="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"
             />
+            <Footer />
         </div>
     );
 }
