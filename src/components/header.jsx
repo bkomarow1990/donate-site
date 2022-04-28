@@ -8,7 +8,7 @@ export default function Header() {
                 Support Ukraine <span>NOW</span>
             </a>
             <button>
-                <a href="/donate">Donate to save lives</a>
+                <a href="/registration">Authentication</a>
             </button>
         </header>
     );

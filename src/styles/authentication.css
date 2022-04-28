@@ -1,0 +1,48 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    gap: 10px;
+}
+
+form span {
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    width: 20%;
+}
+
+form input {
+    border-radius: 15px;
+    padding: 8px;
+    width: 20%;
+}
+
+form button {
+    border: none;
+    padding: 15px;
+    width: 20%;
+    border-radius: 15px;
+    color: #fff;
+    background-color: rgb(114, 114, 224);
+    font-weight: 600;
+}
+
+form a {
+    margin-top: 10px;
+    color: blue;
+}
+
+@media only screen and (max-width: 599px) {
+    form span {
+        width: 70%;
+    }
+
+    form input {
+        width: 70%;
+    }
+
+    form button {
+        width: 75%;
+    }
+}
