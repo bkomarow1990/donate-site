@@ -4,10 +4,9 @@ import tableService from "../api/tables";
 
 export function createTable(history, values) {
     var model = {
-        id: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
         name: values.name,
         goal: values.goal,
-        image: values.image,
+        image: "gay",
         describe: values.describe,
     };
 

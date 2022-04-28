@@ -13,8 +13,8 @@ export default function CreateTablePage() {
     let history = useHistory();
 
     const onFinish = (values) => {
-        createTable(history, values);
         console.log(values);
+        createTable(history, values);
     };
     const onFinishFailed = () => {
         AlertService.errorMessage(
