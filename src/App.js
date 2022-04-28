@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header";
 import LoginPage from "./pages/authentication/loginPage";
 import RegistrationPage from "./pages/authentication/registrationPage";
+import CreateTablePage from "./pages/general/createTablePage";
 import MainPage from "./pages/mainPage";
-import WalletList from "./pages/walletList";
 import War from "./pages/war";
 
 function App() {
@@ -20,6 +20,11 @@ function App() {
                     <Route exact path="/login" component={LoginPage} />
                     <Route exact path="/news" component={War} />
                     <Route exact path="/main" component={MainPage} />
+                    <Route
+                        exact
+                        path="/createTable"
+                        component={CreateTablePage}
+                    />
                     <Route
                         children={() => (
                             <img

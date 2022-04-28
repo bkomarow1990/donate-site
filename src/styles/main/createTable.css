@@ -1,0 +1,33 @@
+.form-container {
+    border: 3px solid rgb(56, 55, 43);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 5%;
+}
+
+.form-container input {
+    padding: 10px;
+    width: 90%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.describe-container {
+    width: 96%;
+    margin-top: 10px;
+}
+
+.upload-btn {
+    width: 98%;
+}
+
+.create-btn {
+    width: 98%;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(86, 218, 86);
+}
