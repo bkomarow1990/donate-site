@@ -49,11 +49,13 @@ export function login(values, history) {
         .loginUser(model)
         .then(
             (response) => {
+                console.log(response.data.token);
                 localStorage.setItem("accessToken", response.data.token);
-                localStorage.setItem(
-                    "refreshToken",
-                    response.data.refreshToken
-                );
+                // localStorage.setItem(
+                //     "refreshToken",
+                //     response.data.refreshToken
+                // );
+                localStorage.setItem("user", JSON.stringify(response.data));
                 store.dispatch(setUserRole());
 
                 history.push("/main");
@@ -79,27 +81,9 @@ export function login(values, history) {
 }
 
 export function logoutUser() {
-    var model = {
-        refreshToken: window.localStorage.getItem("refreshToken"),
-    };
+    localStorage.removeItem("user");
+}
 
-    authenticationService
-        .logoutUser(model)
-        .then(
-            () => {
-                store.dispatch(logout());
-            },
-            (err) => {
-                AlertService.errorMessage(
-                    authErrors.LOGOUT_FAILED,
-                    authErrors.SOMETHING_WENT_WRONG
-                );
-            }
-        )
-        .catch(() => {
-            AlertService.errorMessage(
-                authErrors.LOGOUT_FAILED,
-                authErrors.SOMETHING_WENT_WRONG
-            );
-        });
+export function getCurrentUser() {
+    return JSON.parse(localStorage.getItem(""));
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Table from "../components/table";
 import axios from "axios";
+import getCurrentUserId from "../services/userService.js";
 import "../styles/main/mainPage.css";
 
 export default function MainPage() {
@@ -24,6 +25,7 @@ export default function MainPage() {
             .catch(function (error) {
                 console.error(error);
             });
+        console.log(getCurrentUserId());
     }, []);
 
     return (

@@ -6,11 +6,14 @@ import "../../styles/main/createTable.css";
 import { useHistory } from "react-router-dom";
 import { createTable } from "../../services/tables";
 import { AlertService } from "../../services/alertService.js";
+import getCurrentUserId from "../../services/userService.js";
 
 const { TextArea } = Input;
 
 export default function CreateTablePage() {
     let history = useHistory();
+
+    console.log(getCurrentUserId());
 
     const onFinish = (values) => {
         console.log(values);
@@ -42,14 +45,7 @@ export default function CreateTablePage() {
                 </Form.Item>
 
                 <Form.Item name="image">
-                    <Upload listType="picture" className="image-select">
-                        <Button
-                            icon={<UploadOutlined />}
-                            className="upload-btn"
-                        >
-                            Upload
-                        </Button>
-                    </Upload>
+                    <Input placeholder="Image url" />
                 </Form.Item>
 
                 <Form.Item>

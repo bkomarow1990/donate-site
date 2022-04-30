@@ -1,13 +1,15 @@
 import { AlertService } from "./alertService.js";
 import { authErrors } from "../constants/messages/authMessages";
 import tableService from "../api/tables";
+import getCurrentUserId from "../services/userService.js";
 
 export function createTable(history, values) {
     var model = {
         name: values.name,
         goal: values.goal,
-        image: "gay",
+        image: values.image,
         describe: values.describe,
+        authorId: getCurrentUserId(),
     };
 
     tableService
