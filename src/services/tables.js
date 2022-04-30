@@ -1,7 +1,7 @@
 import { AlertService } from "./alertService.js";
 import { authErrors } from "../constants/messages/authMessages";
 import tableService from "../api/tables";
-import getCurrentUserId from "../services/userService.js";
+import { UserService } from "../services/userService.js";
 
 export function createTable(history, values) {
     var model = {
@@ -9,7 +9,7 @@ export function createTable(history, values) {
         goal: values.goal,
         image: values.image,
         describe: values.describe,
-        authorId: getCurrentUserId(),
+        authorId: UserService.getCurrentUserId(),
     };
 
     tableService

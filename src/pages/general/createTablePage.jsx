@@ -6,14 +6,11 @@ import "../../styles/main/createTable.css";
 import { useHistory } from "react-router-dom";
 import { createTable } from "../../services/tables";
 import { AlertService } from "../../services/alertService.js";
-import getCurrentUserId from "../../services/userService.js";
 
 const { TextArea } = Input;
 
 export default function CreateTablePage() {
     let history = useHistory();
-
-    console.log(getCurrentUserId());
 
     const onFinish = (values) => {
         console.log(values);

@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import UserService from "../../services/userService.js";
 
 export default function AccountPage() {
-  return (
-    <div>accountPage</div>
-  )
+    const [email, setEmail] = useState("nothing");
+
+    useEffect(() => {
+        setEmail(UserService.getCurrentUserEmail());
+    });
+
+    return <div>Your email: {email}</div>;
 }

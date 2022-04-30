@@ -4,6 +4,7 @@ import LoginPage from "./pages/authentication/loginPage";
 import RegistrationPage from "./pages/authentication/registrationPage";
 import CreateTablePage from "./pages/general/createTablePage";
 import MainPage from "./pages/mainPage";
+import AccountPage from "./pages/user/accountPage";
 import War from "./pages/war";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                     <Route exact path="/login" component={LoginPage} />
                     <Route exact path="/news" component={War} />
                     <Route exact path="/main" component={MainPage} />
+                    <Route exact path="/account" component={AccountPage} />
                     <Route
                         exact
                         path="/createTable"
