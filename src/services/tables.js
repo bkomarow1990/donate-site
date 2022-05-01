@@ -6,7 +6,7 @@ import { UserService } from "../services/userService.js";
 export function createTable(history, values) {
     var model = {
         name: values.name,
-        goal: values.goal,
+        price: values.price,
         image: values.image,
         describe: values.describe,
         authorId: UserService.getCurrentUserId(),

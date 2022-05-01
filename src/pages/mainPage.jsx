@@ -32,8 +32,9 @@ export default function MainPage() {
                 <h1>That's main page</h1>
                 {table.map((elem) => (
                     <Table
+                        id={elem.id}
                         name={elem.name}
-                        goal={elem.goal}
+                        price={elem.price}
                         image={elem.image}
                         describe={elem.describe}
                     />

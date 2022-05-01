@@ -3,6 +3,7 @@ import Header from "./components/header";
 import LoginPage from "./pages/authentication/loginPage";
 import RegistrationPage from "./pages/authentication/registrationPage";
 import CreateTablePage from "./pages/general/createTablePage";
+import TableInfo from "./pages/general/tableInfo";
 import MainPage from "./pages/mainPage";
 import AccountPage from "./pages/user/accountPage";
 import War from "./pages/war";
@@ -22,6 +23,7 @@ function App() {
                     <Route exact path="/news" component={War} />
                     <Route exact path="/main" component={MainPage} />
                     <Route exact path="/account" component={AccountPage} />
+                    <Route exact path="/Table/:id" component={TableInfo} />
                     <Route
                         exact
                         path="/createTable"

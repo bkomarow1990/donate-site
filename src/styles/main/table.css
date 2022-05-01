@@ -1,8 +1,50 @@
-.container {
-    border: 1px solid black;
+.albums {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2em;
+    margin: 2em;
 }
 
-#table-img {
-    width: 100px;
-    height: 100px;
+/* Grid inside grid - album cards also use grid for layout setup */
+.album {
+    background: rgba(72, 61, 139, 0.9);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 1.5em;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1.5em;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+    width: 90%;
+}
+
+/* Important step - image will spill over the container if width is not declared explicitly */
+.album__artwork {
+    width: 100%;
+    border-radius: 0.4em;
+}
+
+/* Some additional text styling */
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.25em;
+}
+
+.album__artist {
+    opacity: 0.7;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    font-style: oblique;
+    letter-spacing: 0.7px;
+}
+
+.album__share {
+    width: 90%;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgb(117, 178, 224);
 }

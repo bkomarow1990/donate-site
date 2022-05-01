@@ -1,25 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/main/table.css";
 
 export default function Table(props) {
     return (
-        <div className="container">
-            <h2>
-                <span>Name:</span>
-                {props.name}
-            </h2>
-            <h2>
-                <span>Goal:</span>
-                {props.goal}
-            </h2>
-            <img src={props.image} id="table-img" alt="table-img" />
-            <h2>
-                <span>Describe:</span>
-                {props.describe}
-            </h2>
-            <button>
-                <a href="/share">Share</a>
-            </button>
+        <div className="table-container">
+            <div className="albums">
+                <div className="album">
+                    <img className="album__artwork" src={props.image} />
+                    <div className="album__details">
+                        <h2>{props.name}</h2>
+                        <p className="album__artist">{props.price}</p>
+                        <p className="album__desc">{props.describe}</p>
+                        <button className="album__share">
+                            <Link to={"/Table/" + props.id}>Share</Link>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

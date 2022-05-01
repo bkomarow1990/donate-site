@@ -29,8 +29,8 @@ export default function CreateTablePage() {
                 <Form.Item name="name">
                     <Input placeholder="Name" />
                 </Form.Item>
-                <Form.Item name="goal">
-                    <Input placeholder="Goal" />
+                <Form.Item name="price">
+                    <Input placeholder="Price" type="number" />
                 </Form.Item>
 
                 <Form.Item name="describe">

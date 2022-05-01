@@ -4,7 +4,7 @@ import "../styles/header.css";
 export default function Header() {
     return (
         <header>
-            <a href="/news" id="support-text">
+            <a href="/main" id="support-text">
                 Support Ukraine <span>NOW</span>
             </a>
             <button>

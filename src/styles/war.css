@@ -6,6 +6,11 @@
     width: 100%;
 }
 
+#return-back {
+    color: blue;
+    text-decoration: underline;
+}
+
 @media only screen and (max-width: 599px) {
     .container h1 {
         font-size: 25px;
