@@ -32,3 +32,18 @@ export function createTable(history, values) {
             );
         });
 }
+
+export function getTable() {
+    let id = UserService.getCurrentUserId();
+    tableService.getTableById(32).then(
+        (response) => {
+            return response.data;
+        },
+        () => {
+            AlertService.errorMessage(
+                authErrors.SOMETHING_WENT_WRONG,
+                authErrors.SOMETHING_WENT_WRONG
+            );
+        }
+    );
+}

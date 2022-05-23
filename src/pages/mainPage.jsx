@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Table from "../components/table";
 import axios from "axios";
+import { UserService } from "../services/userService";
 import "../styles/main/mainPage.css";
 
 export default function MainPage() {
@@ -19,6 +20,7 @@ export default function MainPage() {
             .request(options)
             .then(function (response) {
                 setTable(response.data);
+                console.log(UserService.getCurrentUserId());
             })
             .catch(function (error) {
                 console.error(error);
